@@ -7,7 +7,6 @@ class Seguimiento(models.Model):
     paquete_id = fields.Many2one(
         "paqueteria.paquete",
         string="Paquete",
-        required=True,
         ondelete="cascade"
     )
 
@@ -23,10 +22,7 @@ class Seguimiento(models.Model):
             ("reparto", "En reparto"),
             ("entregado", "Entregado"),
         ],
-        string="Estado",
-        required=True
+        string="Estado"
     )
 
-    notas = fields.Text(
-        string="Notas"
-    )
+    notas = fields.Text(string="Notas")
